@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  authenticates_with_sorcery!
+
   validates :password, confirmation: true
   validates :password_confirmation, length: { minimum: 3 }, if: :new_record?
   validates :password_confirmation, presence: true, if: :new_record?
@@ -10,13 +12,6 @@ class User < ActiveRecord::Base
   has_one :default_group, class_name: 'UserGroup', foreign_key: :user_group_default_id
 
   acts_as_user roles: :admin
-
-  authenticates_with_sorcery! do |config|
-    config.authentications_class = Authentication
-  end
-
-  has_many :authentications, dependent: :destroy
-  accepts_nested_attributes_for :authentications
 
   scope :with_name, ->(q) { where('users.name LIKE ?', "%#{q}%").distinct }
 end

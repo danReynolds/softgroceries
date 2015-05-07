@@ -1,6 +1,6 @@
 .container.users-new
   .row
-    .columns.large-10.large-centered
+    .columns.large-8.large-centered
       .widget
         .header
           %h1 Sign up
@@ -8,18 +8,11 @@
           = simple_form_for @user do |f|
             .row
               .columns.large-6
-                %p Enter a few details about yourself and we'll get you started.
                 = f.input :name, input_html: { value: params[:user].try(:[], :name) }
                 = f.input :email, input_html: { value: params[:user].try(:[], :email) }
+              .columns.large-6
                 = f.input :password
                 = f.input :password_confirmation
+            .row
+              .columns.large-12
                 = f.button :submit, 'Create'
-              .columns.large-6.social-icons
-                %p Or if you prefer, create an account using one of our friends below:
-                .text-center
-                  = link_to auth_at_provider_path(provider: :facebook) do
-                    = fa_icon 'facebook'
-                  = link_to auth_at_provider_path(provider: :google) do
-                    = fa_icon 'google'
-                  = link_to auth_at_provider_path(provider: :github) do
-                    = fa_icon 'github'

@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:session][:email], params[:session][:password])
-      redirect_to root_path, notice: "Welcome back #{@user.name}"
+      redirect_back_or_to root_path, notice: "Welcome back #{@user.name}"
     else
       flash.now[:alert] = 'Incorrect login information.'
       render action: 'new'

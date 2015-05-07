@@ -4,6 +4,10 @@ FactoryGirl.define do
     sequence(:name) { |n| "Item#{n}" }
 
     trait :with_grocery do
+      ignore do
+        grocery { create(:grocery) }
+      end
+
       after(:create) do |instance, evaluator|
         instance.groceries << evaluator.grocery
       end

@@ -222,25 +222,3 @@ body {
   .tab-bar .menu-icon { text-indent: 0.6rem; }
   #squiggle { fill: $bright-green; }
 }
-
-.social-icons {
-  a + a { margin-left: 1rem; }
-
-  i {
-    background: $bright-green;
-    border-radius: 35px;
-    color: white;
-    font-size: 3rem;
-    height: 56px;
-    line-height: 1.25;
-    text-align: center;
-    width: 56px;
-    transition: 0.5s;
-
-    &.fa-github { line-height: 1.2; }
-
-    &.fa-facebook:hover { background: #3b5998; }
-    &.fa-google:hover { background: #dd4b39; }
-    &.fa-github:hover { background: #333333; }
-  }
-}
