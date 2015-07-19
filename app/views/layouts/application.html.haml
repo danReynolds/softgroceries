@@ -5,9 +5,11 @@
     %meta{name: "description", content: "We're a grocery app made in Waterloo. You eat over 82125 times, we can help with that."}
     %title SupermarKit
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?libraries=places', "data-turbolinks-track" => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag 'favicon.ico'
+
     %link{ href: "http://fonts.googleapis.com/css?family=Oxygen:400,300", rel: "stylesheet", type: "text/css"}
   %body{class: "#{controller_name} #{action_name}"}
     :coffeescript

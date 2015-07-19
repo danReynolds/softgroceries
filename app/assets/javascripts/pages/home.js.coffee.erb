@@ -1,11 +1,12 @@
-onPage 'pages home', ->
-  window.onload = ->
-    sound = "<%= audio_path('ding.mp3') %>"
-    elevator = new Elevator
-      element: $('.elevator-button').get(0)
-      endAudio: sound
-      mainAudio: false
-      duration: 2000
+$ ->
+  onPage 'pages home', ->
+    window.onload = ->
+      sound = "<%= audio_path('ding.mp3') %>"
+      elevator = new Elevator
+        element: $('.elevator-button').get(0)
+        endAudio: sound
+        mainAudio: false
+        duration: 2000
 
-    $('.elevator-button').click ->
-      $('#user_name').focus()
+      $('.elevator-button').click ->
+        $('#user_name').focus()
