@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 gem 'mysql2'
 gem 'haml-rails'
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -16,7 +16,7 @@ gem 'foundation-rails'
 gem 'sorcery'
 gem 'select2-rails'
 gem 'jquery-datatables-rails', '~> 3.1.1'
-gem 'font-awesome-rails', "~> 4.3.0"
+gem 'font-awesome-rails', '~> 4.3.0'
 gem 'groupdate'
 gem 'chartkick'
 gem 'inline_svg'
@@ -31,11 +31,11 @@ gem 'newrelic_rpm'
 gem 'maildown'
 gem 'nokogiri'
 gem 'nprogress-rails'
-gem "browserify-rails", "~> 0.7"
+gem 'browserify-rails'
 gem 'capistrano-rails-console'
 gem 'airbrake'
 gem 'coveralls', require: false
-gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'active_record_union'
 
 gem 'geokit-rails'
@@ -53,6 +53,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'spring'
-	gem 'webmock', '~> 1.21.0'
+	gem 'webmock'
 	gem 'dotenv-rails'
 end
