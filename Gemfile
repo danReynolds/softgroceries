@@ -30,7 +30,6 @@ gem 'capistrano-npm'
 gem 'newrelic_rpm'
 gem 'maildown'
 gem 'nokogiri'
-gem 'dotenv-deployment'
 gem 'nprogress-rails'
 gem "browserify-rails", "~> 0.7"
 gem 'capistrano-rails-console'
@@ -55,4 +54,5 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'spring'
 	gem 'webmock', '~> 1.21.0'
+	gem 'dotenv-rails'
 end
